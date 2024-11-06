@@ -1,0 +1,20 @@
+usermodel:
+    -username = String
+    -password = String
+    -contact =  Number
+    -fullname = String
+    -email = String
+    -isadmin = boolean (can be one admin = shopkeeper)
+    -cart = array
+    -order = array
+    -picture = database
+
+
+productmodel:
+    -image
+    -name
+    -price
+    -discount
+    -bgcolor
+    -panelcolor
+    -textcolor
