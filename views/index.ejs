@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SCATCH</title>
+</head>
+<body>
+    <div id="wrapper" class="w-full h-screen bg-indigo-500 relative left-0 top-0">
+        <div id="inner-wrapper" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 h-4/5 w-4/5 bg-white rounded-xl flex overflow-hidden">
+            <div id="inner-left" class="w-1/2 h-full py-20 px-10">
+                <h1 class="text-2xl text-black">Welcome to <span class="text-indigo-500 font-bold">SCATCH</span></h1>
+                <h2 class="text-xl text-black font-medium">create your account</h2><br>
+                <form action="/users/create" method="post" class="flex flex-col gap-2">
+                    <input type="text" name="fullname" id="fullname" placeholder="Fullname" class="bg-gray-200 px-2 py-2 rounded w-full border-gray-300 border-2 outline-none focus:border-indigo-500">
+                    <input type="email" name="email" id="email" placeholder="Email" class="bg-gray-200 px-2 py-2 rounded w-full border-gray-300 border-2 outline-none focus:border-indigo-500">
+                    <input type="password" name="password" id="password" placeholder="Password" class="bg-gray-200 px-2 py-2 rounded w-full border-gray-300 border-2 outline-none focus:border-indigo-500">
+                    <input type="submit" value="Create Account" class="bg-indigo-500 px-2 py-1 text-xl rounded text-white hover:bg-indigo-700 hover:cursor-pointer">
+                </form>
+            </div>
+            <div id="inner-right" class="w-1/2 h-full py-20 px-10">
+                <h2 class="text-xl text-black font-medium">Login your account</h2><br>
+                <form action="/users/login" method="post" class="flex flex-col gap-2">
+                    <input type="email" name="email" id="email" placeholder="Email" class="bg-slate-200 px-2 py-2 rounded w-full border-slate-300 border-2 outline-none focus:border-slate-500">
+                    <input type="password" name="password" id="password" placeholder="Password" class="bg-slate-200 px-2 py-2 rounded w-full border-slate-300 border-2 outline-none focus:border-slate-500">
+                    <input type="submit" value="Login Account" class="bg-slate-500 px-2 py-1 text-xl rounded text-white hover:bg-slate-700 hover:cursor-pointer">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
