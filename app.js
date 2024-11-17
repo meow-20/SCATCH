@@ -20,9 +20,6 @@ require('dotenv').config();
 // console.log(process.env.NODE_ENV);
 // console.log(process.env.JWT_KEY);
 
-app.get('/', function(req, res){
-    res.render('index');
-})
 
 app.use('/owner', ownerRouter);
 app.use('/products', productRouter);
