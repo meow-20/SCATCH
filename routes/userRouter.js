@@ -1,16 +1,3 @@
-const express = require('express');
-const router = express.Router();
-const bcrypt = require('bcryptjs');
-
-// const userModel = require('../models/user-model');
-const { registerUser, loginUser, logoutUser } = require('../controllers/authController');
-
-// router.get('/', function(req, res){
-//     res.send('hey, its working!');
-// })
-
-router.post('/register', registerUser);
-router.post('/login', loginUser);
-router.get('/logout', logoutUser);
-
-module.exports = router;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f74f279c968f12bad5289197e53e4955aaa0e75dfc61b0910af59cb241bccd3
+size 484

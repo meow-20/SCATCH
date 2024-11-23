@@ -1,21 +1,3 @@
-const mongoose = require("mongoose");
-
-let userSchema = mongoose.Schema({
-    fullname: String,
-    username: String,
-    password: String,
-    email: String,
-    contact: Number,
-    isAdmin: Boolean,
-    cart: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "product",
-    }],
-    orders: {
-        type: Array,
-        default: []
-    },
-    picture: String
-});
-
-module.exports = mongoose.model('user', userSchema);
+version https://git-lfs.github.com/spec/v1
+oid sha256:9281f56677ded7db260230b715d9f791411e47647888384b64af3c52dba898f7
+size 452

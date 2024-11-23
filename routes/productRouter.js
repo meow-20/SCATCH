@@ -1,22 +1,3 @@
-const express = require('express');
-const router = express.Router();
-const upload = require('../config/multer-config');
-const productModel = require('../models/product-model');
-
-router.post('/create', upload.single('image'), async function(req, res){
-
-    let { productname, price, discount, bgcolor, panelcolor, txtcolor } = req.body;
-
-    let product = await productModel.create({
-        image: req.file.buffer,
-        productname,
-        discount,
-        price,
-        textcolor: txtcolor,
-        panelcolor,
-        bgcolor
-    });
-    res.redirect('/owner/admin');
-})
-
-module.exports = router;
+version https://git-lfs.github.com/spec/v1
+oid sha256:96a8f7174aa0a714abaf5d5b579e2ea2de8847048496b194df242871fe9f5950
+size 625

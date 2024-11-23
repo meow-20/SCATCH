@@ -1,34 +1,3 @@
-const express = require('express');
-const router = express.Router();
-const ownerModel = require('../models/owner-model');
-
-const bcrypt = require('bcryptjs');
-
-
-router.get('/admin', function(req, res){
-    let success = req.flash('success');
-    res.render('createproducts', { success });
-})
-
-// create owner only in development phase
-// checking the NODE_ENV is development or not
-if(process.env.NODE_ENV === "development"){
-    router.post('/create', async function(req, res){
-        let owner = await ownerModel.find();
-        if(owner.length > 0) return res.status(503).send("You cannot create more than one owner.");
-
-        bcrypt.genSalt(10, function(err, salt){
-            
-        })
-
-        let { fullname, email, password } = req.body;
-        let createdOwner = await ownerModel.create({
-            fullname,
-            password,
-            email
-        });
-        res.status(201).send(createdOwner);
-    })    
-}
-
-module.exports = router;
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9dee4288720e2eadaa7d92ac75b246c510d324adb4212b11c7eed2d610a9f0a
+size 994
