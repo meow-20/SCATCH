@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>Shop</title>
-</head>
-<body>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <% if(success.length > 0){ %>
+        <div id="flash-message" class="absolute top-7 left-1/2 -translate-x-1/2 -translate-y-1/2 p-1 rounded-md bg-red-500">
+            <span class="inline-block mt-1 mb-1 text-white">
+                <%= success %>
+            </span>
+        </div>
+    <% } %>
     <div id="wrapper" class="bg-white h-screen w-full flex">
-        <div id="left" class="w-1/4 h-screen pt-24 px-8">
-            <h1 class="text-black font-medium text-xl"><span class="text-2xl font-bold text-indigo-700">SCATCH</span> SHOP</h1>
-            <h2 class="text-black mt-10">Sort By :</h2>
-            <a class="text-black font-thin hover:font-bold" href="#">All Products</a><br>
-            <a class="text-black font-thin hover:font-bold" href="#">Availabilty</a><br>
-            <a class="text-black font-thin hover:font-bold" href="#">Price</a><br>
-            <a class="text-black font-thin hover:font-bold" href="#">New Collection</a><br>
-            <a class="text-black font-thin hover:font-bold" href="#">Discounted Products</a><br>
+      <div id="left" class="w-1/4 h-screen pt-24 px-8">
+        <h1 class="text-black font-medium text-xl">
+          <span class="text-2xl font-bold text-indigo-700">SCATCH</span> SHOP
+        </h1>
+        <h2 class="text-black mt-10">Sort By :</h2>
+        <a class="text-black font-thin hover:font-bold" href="#">All Products</a
+        ><br />
+        <a class="text-black font-thin hover:font-bold" href="#">Availabilty</a
+        ><br />
+        <a class="text-black font-thin hover:font-bold" href="#">Price</a><br />
+        <a class="text-black font-thin hover:font-bold" href="#"
+          >New Collection</a
+        ><br />
+        <a class="text-black font-thin hover:font-bold" href="#"
+          >Discounted Products</a
+        ><br />
+      </div>
+      <div id="right" class="w-3/4 h-screen py-24 px-10">
+        <% products.forEach(function(product){ %>
+        <div class="h-44 w-36 m-1 inline-block">
+          <div id="top-img" class="h-3/4 w-full bg-[<%= product.bgcolor %>]">
+            <img
+              class="w-full h-full object-contain"
+              src="data:image/jpeg;base64, <%= product.image.toString('base64') %>"
+              alt="Product Image"
+            />
+          </div>
+          <div
+            id="btm-details"
+            class="h-1/4 w-full bg-[<%= product.panelcolor %>] px-3 text-white flex items-center justify-between gap-3"
+          >
+            <div id="btm-left">
+              <p class="text-sm text-white"><%= product.productname %></p>
+              <p class="text-xs">
+                Rs.<%= product.price %>
+                <span class="bg-red-700 rounded-xl px-1"
+                  >-<%= product.discount %>%</span
+                >
+              </p>
+            </div>
+            <div id="btm-right" class="">
+              <a
+                href="/addtocart/<%= product._id %>"
+                id="btm-add-btn"
+                class="h-7 w-7 bg-gray-200 rounded-2xl text-[<%= product.textcolor %>] text-xl font-bold flex items-center justify-center cursor-pointer"
+              >
+              <i class="ri-add-line"></i>             
+            </a>
+            </div>
+          </div>
         </div>
-        <div id="right" class="w-3/4 h-screen py-24 px-10">
-            <% products.forEach(function(product){ %>
-                <div class="h-44 w-36 m-1 inline-block">
-                    <div id="top-img" class="h-3/4 w-full bg-[<%= product.bgcolor %>]">
-                        <img class="w-full h-full object-contain" src="data:image/jpeg;base64, <%= product.image.toString('base64') %>" alt="Product Image">
-                    </div>
-                    <div id="btm-details" class="h-1/4 w-full bg-[<%= product.panelcolor %>] px-3 text-white flex items-center justify-between gap-3">
-                        <div id="btm-left">
-                            <p class="text-sm text-white"><%= product.productname %></p>
-                            <p class="text-xs">Rs.<%= product.price %> <span class="bg-red-700 rounded-xl px-1">-<%= product.discount %>%</span></p>
-                        </div>
-                        <div id="btm-right" class="">
-                            <div id="btm-add-btn" class="h-7 w-7 bg-gray-200 rounded-2xl text-[<%= product.textcolor %>] text-xl font-bold flex items-center justify-center cursor-pointer">+</div>
-                        </div>
-                    </div>
-                </div>
-            <% }) %>
-        </div>
+        <% }) %>
+      </div>
     </div>
-</body>
+    <script>
+        setTimeout(() => {
+      const flashMessage = document.getElementById('flash-message');
+      if (flashMessage) {
+        flashMessage.classList.add('hidden');
+      }
+    }, 3000);
+    </script>
+  </body>
 </html>

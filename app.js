@@ -33,6 +33,8 @@ app.set('view engine', 'ejs');
 
 app.get('/', indexRouter);
 app.get('/shop', indexRouter);
+app.get('/addtocart/:productid', indexRouter);
+app.get('/cart', indexRouter);
 
 app.use('/owner', ownerRouter);
 app.use('/products', productRouter);

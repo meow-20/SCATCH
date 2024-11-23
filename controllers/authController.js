@@ -41,7 +41,7 @@ module.exports.loginUser = async function(req, res){
         if(result){
             let token = generateToken(user);
             res.cookie('token', token);
-            res.render('shop');
+            res.redirect('/shop');
         }else{
             req.flash('error', 'Email or Password Incorrect');
             res.redirect('/');
@@ -50,6 +50,6 @@ module.exports.loginUser = async function(req, res){
 };
 
 module.exports.logoutUser = async function(req, res){
-  res.send('you are log out');
-  // req.cookie(token, '');
+  res.clearCookie('token', { path: '/' });
+  res.redirect('/');  
 };

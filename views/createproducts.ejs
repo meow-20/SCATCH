@@ -7,6 +7,15 @@
     <title>Create Products | Admin</title>
 </head>
 <body>
+    <%- include('partials/header') %>
+
+    <% if(success.length > 0){ %>
+        <div class="absolute top-7 left-1/2 -translate-x-1/2 -translate-y-1/2 p-1 rounded-md bg-red-500">
+            <span class="inline-block mt-1 mb-1 text-white">
+                <%= success %>
+            </span>
+        </div>
+    <% } %>
     <div id="wrapper" class="bg-white h-screen w-full flex">
         <div id="left" class="w-1/4 h-screen pt-24 px-8">
             <h1 class="text-black font-medium text-xl"><span class="text-2xl font-bold text-indigo-700">SCATCH</span> SHOP</h1>
