@@ -18,3 +18,11 @@ productmodel:
     -bgcolor
     -panelcolor
     -textcolor
+
+colors for products: 
+    -moneybag: #EBEBEB, #B8B8B8
+    -totebag: #b2ffa9, #4fb243
+    -officebag: #ff9696, #660101
+    -schoolbag: #ffde6e, #a79318  
+    -pursebag: #ea8d8d, #8c0202
+    -paperbag: #feecb2, #b09c5d

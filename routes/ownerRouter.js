@@ -5,8 +5,8 @@ const ownerModel = require('../models/owner-model');
 const bcrypt = require('bcryptjs');
 
 
-router.get('/', function(req, res){
-    res.send('hey, its working!');
+router.get('/admin', function(req, res){
+    res.render('createproducts');
 })
 
 // create owner only in development phase
