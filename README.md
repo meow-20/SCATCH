@@ -44,7 +44,7 @@ An E-Commerce platform built using **Express**, **Multer**, **Mongoose**, **EJS*
    The application will be running on `http://localhost:3000`.
 
 ## Folder Structure
-
+```
 📂 SCATCH
 ├── 📂 public              # Static files (CSS, JS, Images)
 ├── 📂 views               # EJS templates
@@ -57,7 +57,7 @@ An E-Commerce platform built using **Express**, **Multer**, **Mongoose**, **EJS*
 ├── .env                   # Environment variables
 ├── app.js              # Main server file
 └── package.json           # Node.js dependencies
-
+```
 ## Database Models
 
 ### User Model
