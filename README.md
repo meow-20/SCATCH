@@ -1,6 +1,4 @@
-Here’s the complete `README.md` in one block for easy copying:
 
-```markdown
 # E-Commerce Website for Bag Retailer
 
 An E-Commerce platform built using **Express**, **Multer**, **Mongoose**, **EJS**, and **bcryptjs**, designed for a bag retail business. This project supports functionalities for an **Admin/Owner** to manage the store and **Users/Customers** to shop for bags seamlessly.
@@ -29,33 +27,24 @@ An E-Commerce platform built using **Express**, **Multer**, **Mongoose**, **EJS*
 ## Installation and Setup
 
 1. **Clone the Repository**
-   ```bash
    git clone https://github.com/your-username/SCATCH.git
    cd SCATCH
-   ```
 
 2. **Install Dependencies**
-   ```bash
    npm install
-   ```
 
 3. **Set Up Environment Variables**
    Create a `.env` file in the root directory with the following:
-   ```plaintext
    PORT=3000
    MONGO_URI=your_mongodb_connection_string
    SECRET_KEY=your_secret_key
-   ```
 
 4. **Start the Server**
-   ```bash
    npm start
-   ```
    The application will be running on `http://localhost:3000`.
 
 ## Folder Structure
 
-```
 📂 SCATCH
 ├── 📂 public              # Static files (CSS, JS, Images)
 ├── 📂 views               # EJS templates
@@ -68,7 +57,6 @@ An E-Commerce platform built using **Express**, **Multer**, **Mongoose**, **EJS*
 ├── .env                   # Environment variables
 ├── app.js              # Main server file
 └── package.json           # Node.js dependencies
-```
 
 ## Database Models
 
@@ -105,6 +93,5 @@ Contributions are welcome! Please fork the repository and create a pull request 
 For questions or support, feel free to contact me:
 - **Email**: your-email@example.com
 - **GitHub**: [Bansari-Panchal](https://github.com/meow-20)
-```
 
 You can now copy this as a single block for your project! Let me know if further edits are needed.
