@@ -91,7 +91,7 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 ## Contact
 For questions or support, feel free to contact me:
-- **Email**: bansaripanchal2021@gmail.com
+- **Email**: bansaripanchaluk@gmail.com
 - **GitHub**: [Bansari-Panchal](https://github.com/meow-20)
 
 You can now copy this as a single block for your project! Let me know if further edits are needed.
